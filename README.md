@@ -30,15 +30,15 @@ Readout: **% IVL+ among KRT14+ cells per well (differentiation index).**
 
 ## Installation
 ```bash
-pip install "git+https://github.com/<user>/diffquant"                    # core: measurement, gating, scoring, calibration
-pip install "diffquant[seg] @ git+https://github.com/<user>/diffquant"   # core + Cellpose for segmentation (GPU recommended)
+pip install "git+https://github.com/yidan-jiang/diffquant"                    # core: measurement, gating, scoring, calibration
+pip install "diffquant[seg] @ git+https://github.com/yidan-jiang/diffquant"   # core + Cellpose for segmentation (GPU recommended)
 ```
 Requires Python ≥ 3.9. Segmentation can also be performed with other software: `segmentation.masks` then points to a
 folder of label images.
 
 ## Quick start (bundled example)
 ```bash
-git clone https://github.com/<user>/diffquant && cd diffquant && pip install -e .
+git clone https://github.com/yidan-jiang/diffquant && cd diffquant && pip install -e .
 diffquant run examples/config.yaml                    # measure -> gate -> cut -> focus QC -> summary (bundled masks)
 diffquant overlay examples/config.yaml --site B08 1   # ImageJ TIFF with outlines coloured by call
 ```
@@ -73,6 +73,10 @@ diffquant score-sets screen.yaml        # blinded single-cell crops per plate an
 diffquant calibrate screen.yaml         # recommended gate Δ and readout factor; agreement curves and figure
 ```
 Procedure and criteria: [docs/recalibration.md](docs/recalibration.md).
+
+## Use with Claude Code or Codex
+diffquant can be run with an AI coding assistant such as Claude Code or Codex; instructions for these tools are in
+`AGENTS.md`. Manual scoring for calibration requires human curation.
 
 ## Outputs
 Per plate (`<output>/<plate>/`): `cells_called.csv.gz` (one row per cell: area, raw and background-subtracted means,

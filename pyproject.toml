@@ -29,6 +29,9 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]
 
+[project.urls]
+Repository = "https://github.com/yidan-jiang/diffquant"
+
 [project.optional-dependencies]
 seg = ["cellpose>=4"]
 dev = ["pytest>=7"]

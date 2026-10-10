@@ -6,7 +6,7 @@ account and paths.
 ```bash
 # once: environment
 conda create -n diffquant python=3.11 -y && conda activate diffquant
-pip install "diffquant[seg] @ git+https://github.com/<user>/diffquant"
+pip install "diffquant[seg] @ git+https://github.com/yidan-jiang/diffquant"
 
 # list plates -> one array task per plate
 N=$(diffquant plates my.yaml | wc -l)
