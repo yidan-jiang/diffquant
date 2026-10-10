@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use diffquant, please cite it as below."
+title: "diffquant: differentiation marker quantification - cell-type-gated scoring of marker-positive cells in high-content images"
+authors:
+  - family-names: Jiang
+    given-names: Yidan
+version: 0.1.0
+date-released: 2026-10-10
+license: MIT
+repository-code: "https://github.com/<user>/diffquant"

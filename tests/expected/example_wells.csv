@@ -1,0 +1,2 @@
+plate,well,n_cells,n_sites,n_filtered,n_gated,n_gate_low,frac_gate_low,n_IVL_pos,pct_IVL_pos,valid
+example,B08,521,1,0,515,0,0.0,123,23.88,True

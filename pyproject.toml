@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffquant"
+version = "0.1.0"
+description = "Cell-type-gated quantification of marker-positive cells (e.g. involucrin+ keratinocytes) in high-content plate images"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Yidan Jiang" }]
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.22",
+  "scipy>=1.8",
+  "pandas>=1.4",
+  "scikit-image>=0.19",
+  "tifffile>=2022.5",
+  "imageio>=2.20",
+  "matplotlib>=3.5",
+  "pyyaml>=6",
+  "roifile>=2022.9",
+]
+keywords = ["high-content screening", "image analysis", "cellpose", "keratinocyte", "differentiation", "involucrin"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Image Processing",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.optional-dependencies]
+seg = ["cellpose>=4"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+diffquant = "diffquant.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
