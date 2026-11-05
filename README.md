@@ -106,5 +106,9 @@ Details: [docs/method.md](docs/method.md). Cluster use: [docs/slurm.md](docs/slu
 `init` · `inspect` · `plates` · `segment` · `measure` · `threshold` · `focus` · `summarize` · `run` · `score-sets` ·
 `calibrate` · `overlay`; options: `diffquant <command> -h`.
 
+## Credits
+diffquant was developed with [Claude](https://claude.ai) (Anthropic) as co-author: Claude helped write
+the code and documentation. All methods and results were reviewed and validated by the author.
+
 ## Citation and licence
 MIT licence. Citation details: `CITATION.cff`.
